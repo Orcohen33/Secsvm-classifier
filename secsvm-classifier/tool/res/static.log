@@ -1,0 +1,932 @@
+
+
+
+              ___.   .__.__                                                .______.                                                  
+  _____   ____\_ |__ |__|  |   ____               ___________    ____    __| _/\_ |__   _______  ___       ____  ____   _____        
+ /     \ /  _ \| __ \|  |  | _/ __ \    ______   /  ___/\__  \  /    \  / __ |  | __ \ /  _ \  \/  /     _/ ___\/  _ \ /     \       
+|  Y Y  (  <_> ) \_\ \  |  |_\  ___/   /_____/   \___ \  / __ \|   |  \/ /_/ |  | \_\ (  <_> >    <      \  \__(  <_> )  Y Y  \      
+|__|_|  /\____/|___  /__|____/\___  >           /____  >(____  /___|  /\____ |  |___  /\____/__/\_ \  /\  \___  >____/|__|_|  /      
+      \/           \/             \/                 \/      \/     \/      \/      \/            \/  \/      \/            \/       
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+	static analysis
+	2022-12-07	-	18:51:30
+
+
+-----------------------------------------------------------------------
+	application infos
+-----------------------------------------------------------------------
+		sha256:	AB5F85149E9C0597332C18FDA45BE1A8F587713043E1258AC96CB33ED07A1BA0
+		md5:	B2D1DA2B9930458BA25FFABA53E97481
+		Label:	com.ps.blackwhite
+		SDK version:	3
+
+-----------------------------------------------------------------------
+	used providers
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	granted permissions
+-----------------------------------------------------------------------
+		Permission:	android.permission.INTERNET
+		Permission:	android.permission.READ_PHONE_STATE
+		Permission:	android.permission.ACCESS_NETWORK_STATE
+		Permission:	android.permission.ACCESS_WIFI_STATE
+		Permission:	android.permission.CHANGE_WIFI_STATE
+		Permission:	android.permission.WRITE_EXTERNAL_STORAGE
+		Permission:	android.permission.INSTALL_PACKAGES
+		Permission:	android.permission.ACCESS_COARSE_LOCATION
+		Permission:	android.permission.READ_SMS
+		Permission:	android.permission.WRITE_SMS
+		Permission:	android.permission.RECEIVE_BOOT_COMPLETED
+
+-----------------------------------------------------------------------
+	application features
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	used intents
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	used services and receivers
+-----------------------------------------------------------------------
+		AndroidManifest	com.google.update.UpdateService
+		AndroidManifest	com.google.update.Receiver
+
+-----------------------------------------------------------------------
+	potentially suspicious api-calls
+-----------------------------------------------------------------------
+		res/smali/com/adwo/adsdk/b.2.smali:1239	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/i.2.smali:1638	    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/adwo/adsdk/i.2.smali:1673	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/adwo/adsdk/i.2.smali:1902	    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/adwo/adsdk/j.2.smali:96	    invoke-virtual {p1, v2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/adwo/adsdk/j.2.smali:700	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/j.2.smali:730	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/j.2.smali:760	    invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/j.2.smali:1180	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/adwo/adsdk/j.2.smali:1218	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/adwo/adsdk/j.2.smali:1401	    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/L.smali:945	    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/s.smali:58	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/adwo/adsdk/v.smali:749	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/UpdateService.smali:193	    new-instance v2, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:195	    invoke-direct {v2, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:198	    .local v2, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:206	    invoke-virtual {v2, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:544	    new-instance v0, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:546	    invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:549	    .local v0, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:557	    invoke-virtual {v0, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:594	    .end local v0    # "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:609	    .restart local v0    # "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:665	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:667	    invoke-direct {v3, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:670	    .local v3, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:678	    invoke-virtual {v3, v10}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:875	    new-instance v0, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:877	    invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:880	    .local v0, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:888	    invoke-virtual {v0, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:2071	    const-string v1, "/system/bin/su"
+		res/smali/com/google/update/UpdateService.smali:2240	    invoke-virtual {p0, v6}, Lcom/google/update/UpdateService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/UpdateService.smali:2248	    invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->getWifiState()I
+		res/smali/com/google/update/UpdateService.smali:2257	    invoke-virtual {v5, v9}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2270	    invoke-virtual {v5, v3}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2290	    invoke-virtual {v5, v10}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2454	    invoke-virtual {v10, v11}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/google/update/UpdateService.smali:2693	    const-string v4, "adb_enabled"
+		res/smali/com/google/update/Utils$PhoneState.smali:37	    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:94	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:142	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:179	    sget-object v2, Landroid/os/Build;->BRAND:Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:193	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:217	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:276	    invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:454	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/google/update/Utils$PhoneState.smali:477	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$TCP.smali:181	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/Utils.smali:395	    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/Utils.smali:413	    new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
+		res/smali/com/google/update/Utils.smali:419	    invoke-direct {v2, v3, v5}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+		res/smali/com/google/update/Utils.smali:422	    .local v2, "skeySpec":Ljavax/crypto/spec/SecretKeySpec;
+		res/smali/com/google/update/Utils.smali:425	    invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+		res/smali/com/google/update/Utils.smali:425	    invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+		res/smali/com/google/update/Utils.smali:841	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/google/update/Utils.smali:924	    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils.smali:1012	    invoke-virtual {v2, v1}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/ju6/a.smali:191	    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/ju6/a.smali:964	    sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1643	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/ju6/a.smali:1651	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1663	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1727	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCellLocation()Landroid/telephony/CellLocation;
+		res/smali/com/ju6/a.smali:1752	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/ju6/a.smali:1803	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/uk/co/lilhermit/android/core/Native.smali:26	    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+		res/smali/uk/co/lilhermit/android/core/Native.smali:26	    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+
+-----------------------------------------------------------------------
+	URL's and IP's inside the code
+-----------------------------------------------------------------------
+		res/smali/com/adwo/adsdk/AdwoAdBrowserActivity.smali:0	http://www.adwo.com
+		res/smali/com/adwo/adsdk/AdwoAdView.smali:0	http://schemas.android.com/apk/res/
+		res/smali/com/adwo/adsdk/g.2.smali:0	http://maps.google.com/maps?q=
+		res/smali/com/adwo/adsdk/v.smali:0	http://market.android.com
+		res/smali/com/adwo/adsdk/v.smali:0	https://market.android.com
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd&
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd?
+
+
+
+              ___.   .__.__                                                .______.                                                  
+  _____   ____\_ |__ |__|  |   ____               ___________    ____    __| _/\_ |__   _______  ___       ____  ____   _____        
+ /     \ /  _ \| __ \|  |  | _/ __ \    ______   /  ___/\__  \  /    \  / __ |  | __ \ /  _ \  \/  /     _/ ___\/  _ \ /     \       
+|  Y Y  (  <_> ) \_\ \  |  |_\  ___/   /_____/   \___ \  / __ \|   |  \/ /_/ |  | \_\ (  <_> >    <      \  \__(  <_> )  Y Y  \      
+|__|_|  /\____/|___  /__|____/\___  >           /____  >(____  /___|  /\____ |  |___  /\____/__/\_ \  /\  \___  >____/|__|_|  /      
+      \/           \/             \/                 \/      \/     \/      \/      \/            \/  \/      \/            \/       
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+	static analysis
+	2022-12-07	-	18:51:31
+
+
+-----------------------------------------------------------------------
+	application infos
+-----------------------------------------------------------------------
+		sha256:	16AAC4E2964BC8FF75AD07F64CE8991F433AAEBE6E790ECC1CF45F4D715EE15C
+		md5:	3A889AC2880531E30B89D70051856E94
+		Label:	com.zs.terence.divination06
+		SDK version:	3
+
+-----------------------------------------------------------------------
+	used providers
+-----------------------------------------------------------------------
+		AndroidManifest	android.provider.Telephony.SMS_RECEIVED
+
+-----------------------------------------------------------------------
+	granted permissions
+-----------------------------------------------------------------------
+		Permission:	android.permission.READ_PHONE_STATE
+		Permission:	android.permission.READ_CONTACTS
+		Permission:	android.permission.ACCESS_NETWORK_STATE
+		Permission:	android.permission.WRITE_CONTACTS
+		Permission:	android.permission.RECEIVE_SMS
+		Permission:	android.permission.RECEIVE_BOOT_COMPLETED
+		Permission:	android.permission.CHANGE_WIFI_STATE
+		Permission:	android.permission.ACCESS_WIFI_STATE
+		Permission:	android.permission.WAKE_LOCK
+		Permission:	android.permission.SEND_SMS
+		Permission:	android.permission.READ_SMS
+		Permission:	android.permission.WRITE_SMS
+		Permission:	android.permission.INTERNET
+		Permission:	android.permission.WRITE_EXTERNAL_STORAGE
+		Permission:	android.permission.WRITE_APN_SETTINGS
+		Permission:	android.permission.CHANGE_NETWORK_STATE
+		Permission:	android.permission.READ_LOGS
+
+-----------------------------------------------------------------------
+	application features
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	used intents
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	used services and receivers
+-----------------------------------------------------------------------
+		AndroidManifest	com.tencent.tools.BootS
+		AndroidManifest	com.tencent.tools.messageR
+		AndroidManifest	com.tencent.tools.BootR
+		AndroidManifest	com.tencent.tools.NetCheckReceiver
+
+-----------------------------------------------------------------------
+	potentially suspicious api-calls
+-----------------------------------------------------------------------
+		res/smali/com/google/update/UpdateService.smali:193	    new-instance v2, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:195	    invoke-direct {v2, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:198	    .local v2, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:206	    invoke-virtual {v2, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:544	    new-instance v0, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:546	    invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:549	    .local v0, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:557	    invoke-virtual {v0, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:594	    .end local v0    # "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:609	    .restart local v0    # "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:665	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:667	    invoke-direct {v3, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:670	    .local v3, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:678	    invoke-virtual {v3, v10}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:875	    new-instance v0, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:877	    invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:880	    .local v0, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:888	    invoke-virtual {v0, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:2071	    const-string v1, "/system/bin/su"
+		res/smali/com/google/update/UpdateService.smali:2240	    invoke-virtual {p0, v6}, Lcom/google/update/UpdateService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/UpdateService.smali:2248	    invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->getWifiState()I
+		res/smali/com/google/update/UpdateService.smali:2257	    invoke-virtual {v5, v9}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2270	    invoke-virtual {v5, v3}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2290	    invoke-virtual {v5, v10}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2454	    invoke-virtual {v10, v11}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/google/update/UpdateService.smali:2693	    const-string v4, "adb_enabled"
+		res/smali/com/google/update/Utils$PhoneState.smali:37	    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:94	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:142	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:179	    sget-object v2, Landroid/os/Build;->BRAND:Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:193	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:217	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:276	    invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:454	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/google/update/Utils$PhoneState.smali:477	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$TCP.smali:181	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/Utils.smali:395	    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/Utils.smali:413	    new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
+		res/smali/com/google/update/Utils.smali:419	    invoke-direct {v2, v3, v5}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+		res/smali/com/google/update/Utils.smali:422	    .local v2, "skeySpec":Ljavax/crypto/spec/SecretKeySpec;
+		res/smali/com/google/update/Utils.smali:425	    invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+		res/smali/com/google/update/Utils.smali:425	    invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+		res/smali/com/google/update/Utils.smali:841	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/google/update/Utils.smali:924	    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils.smali:1012	    invoke-virtual {v2, v1}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/ju6/a.smali:191	    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/ju6/a.smali:964	    sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1643	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/ju6/a.smali:1651	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1663	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1727	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCellLocation()Landroid/telephony/CellLocation;
+		res/smali/com/ju6/a.smali:1752	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/ju6/a.smali:1803	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/APN_TOOLS.smali:43	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/APN_TOOLS.smali:470	    invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/Download_android.smali:82	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/other/net/Download_android.smali:1536	    new-instance v4, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1538	    invoke-direct {v4, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1541	    .local v4, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1548	    invoke-virtual {v4, v0}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1559	    invoke-virtual {v4}, Lorg/apache/http/client/methods/HttpPost;->getRequestLine()Lorg/apache/http/RequestLine;
+		res/smali/com/other/net/Download_android.smali:1715	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1717	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1720	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1725	    invoke-virtual {v3, v6, v7}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1770	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1847	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1849	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1852	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1864	    invoke-virtual {v3, v6, p2}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1890	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1967	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1969	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1972	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1977	    invoke-virtual {v3, v6, v7}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2011	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:2139	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:2141	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2144	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:2189	    invoke-virtual {v3, v7, p1}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2224	    invoke-virtual {v3, v7}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/FileUtils.smali:30	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/other/net/FileUtils.smali:312	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/FileUtils.smali:338	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/FileUtils.smali:352	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/HelpUtils.smali:36	    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+		res/smali/com/other/net/HelpUtils.smali:80	    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+		res/smali/com/other/net/HelpUtils.smali:246	    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/PayStatusXmlParse.smali:829	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/StringUtil.smali:1707	    invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:481	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:492	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:588	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:599	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:690	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:701	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:792	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:803	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:894	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:905	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:995	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1004	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1094	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1105	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1191	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1202	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1229	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1240	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:207	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:285	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:296	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:307	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/tencent/tools/BootS.smali:920	    invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/BootS.smali:1668	    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/BootS.smali:1677	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/tencent/tools/BootS.smali:1784	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/tencent/tools/BootS.smali:1835	    invoke-virtual {v2, v5}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/tencent/tools/BootS.smali:2118	    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:94	    invoke-virtual {v8, v0}, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:129	    invoke-virtual {v8, v9}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:272	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/tencent/tools/messageR.smali:512	    invoke-virtual/range {v0 .. v5}, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+		res/smali/com/tencent/tools/NetCheckReceiver.smali:32	    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:252	    invoke-virtual {p0, v0}, Lcom/zs/terence/divination06/AcpActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:427	    invoke-virtual {v2, v5}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:492	    invoke-virtual {p0, v2}, Lcom/zs/terence/divination06/AcpActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:501	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:600	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/zs/terence/divination06/BallotActivity.smali:200	    invoke-virtual {p0, v0}, Lcom/zs/terence/divination06/BallotActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/mediaPlayer.smali:106	    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/uk/co/lilhermit/android/core/Native.smali:26	    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+		res/smali/uk/co/lilhermit/android/core/Native.smali:26	    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+
+-----------------------------------------------------------------------
+	URL's and IP's inside the code
+-----------------------------------------------------------------------
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd&
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd?
+		res/smali/com/net/mmwebview/mm_WebView$MyJavaScript.smali:0	http://a.10086.cn
+		res/smali/com/net/mmwebview/mm_WebView$MyJavaScript.smali:0	http://mmota.10086.cn
+		res/smali/com/other/net/Download_android.smali:0	http://10.0.0.172:80/
+		res/smali/com/other/net/Download_android.smali:0	10.0.0.172
+		res/smali/com/tencent/tools/BootS.smali:0	http://222.73.127.57:10670/sp/info.xml?tag=update&imei=
+		res/smali/com/tencent/tools/BootS.smali:0	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/place.xml?imei=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://a.10086.cn
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/sendnum.xml
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/getmobileip.xml?detailCode=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/loginfo.xml?log=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/sendnum.xml
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://www.w3.org/XML/1998/namespace
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://www.w3.org/2000/xmlns/
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://www.w3.org/XML/1998/namespace
+		res/smali/org/kxml2/kdom/Document.smali:0	http://xmlpull.org/v1/doc/properties.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+
+
+
+              ___.   .__.__                                                .______.                                                  
+  _____   ____\_ |__ |__|  |   ____               ___________    ____    __| _/\_ |__   _______  ___       ____  ____   _____        
+ /     \ /  _ \| __ \|  |  | _/ __ \    ______   /  ___/\__  \  /    \  / __ |  | __ \ /  _ \  \/  /     _/ ___\/  _ \ /     \       
+|  Y Y  (  <_> ) \_\ \  |  |_\  ___/   /_____/   \___ \  / __ \|   |  \/ /_/ |  | \_\ (  <_> >    <      \  \__(  <_> )  Y Y  \      
+|__|_|  /\____/|___  /__|____/\___  >           /____  >(____  /___|  /\____ |  |___  /\____/__/\_ \  /\  \___  >____/|__|_|  /      
+      \/           \/             \/                 \/      \/     \/      \/      \/            \/  \/      \/            \/       
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+	static analysis
+	2022-12-07	-	18:52:50
+
+
+-----------------------------------------------------------------------
+	application infos
+-----------------------------------------------------------------------
+		sha256:	AB5F85149E9C0597332C18FDA45BE1A8F587713043E1258AC96CB33ED07A1BA0
+		md5:	B2D1DA2B9930458BA25FFABA53E97481
+		Label:	com.ps.blackwhite
+		SDK version:	3
+
+-----------------------------------------------------------------------
+	used providers
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	granted permissions
+-----------------------------------------------------------------------
+		Permission:	android.permission.INTERNET
+		Permission:	android.permission.READ_PHONE_STATE
+		Permission:	android.permission.ACCESS_NETWORK_STATE
+		Permission:	android.permission.ACCESS_WIFI_STATE
+		Permission:	android.permission.CHANGE_WIFI_STATE
+		Permission:	android.permission.WRITE_EXTERNAL_STORAGE
+		Permission:	android.permission.INSTALL_PACKAGES
+		Permission:	android.permission.ACCESS_COARSE_LOCATION
+		Permission:	android.permission.READ_SMS
+		Permission:	android.permission.WRITE_SMS
+		Permission:	android.permission.RECEIVE_BOOT_COMPLETED
+
+-----------------------------------------------------------------------
+	application features
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	used intents
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	used services and receivers
+-----------------------------------------------------------------------
+		AndroidManifest	com.google.update.UpdateService
+		AndroidManifest	com.google.update.Receiver
+
+-----------------------------------------------------------------------
+	potentially suspicious api-calls
+-----------------------------------------------------------------------
+		res/smali/com/adwo/adsdk/b.2.smali:1239	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/i.2.smali:1638	    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/adwo/adsdk/i.2.smali:1673	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/adwo/adsdk/i.2.smali:1902	    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/adwo/adsdk/j.2.smali:96	    invoke-virtual {p1, v2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/adwo/adsdk/j.2.smali:700	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/j.2.smali:730	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/j.2.smali:760	    invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/j.2.smali:1180	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/adwo/adsdk/j.2.smali:1218	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/adwo/adsdk/j.2.smali:1401	    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/L.smali:945	    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/adwo/adsdk/s.smali:58	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/adwo/adsdk/v.smali:749	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/UpdateService.smali:193	    new-instance v2, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:195	    invoke-direct {v2, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:198	    .local v2, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:206	    invoke-virtual {v2, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:544	    new-instance v0, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:546	    invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:549	    .local v0, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:557	    invoke-virtual {v0, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:594	    .end local v0    # "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:609	    .restart local v0    # "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:665	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:667	    invoke-direct {v3, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:670	    .local v3, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:678	    invoke-virtual {v3, v10}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:875	    new-instance v0, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:877	    invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:880	    .local v0, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:888	    invoke-virtual {v0, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:2071	    const-string v1, "/system/bin/su"
+		res/smali/com/google/update/UpdateService.smali:2240	    invoke-virtual {p0, v6}, Lcom/google/update/UpdateService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/UpdateService.smali:2248	    invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->getWifiState()I
+		res/smali/com/google/update/UpdateService.smali:2257	    invoke-virtual {v5, v9}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2270	    invoke-virtual {v5, v3}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2290	    invoke-virtual {v5, v10}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2454	    invoke-virtual {v10, v11}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/google/update/UpdateService.smali:2693	    const-string v4, "adb_enabled"
+		res/smali/com/google/update/Utils$PhoneState.smali:37	    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:94	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:142	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:179	    sget-object v2, Landroid/os/Build;->BRAND:Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:193	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:217	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:276	    invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:454	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/google/update/Utils$PhoneState.smali:477	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$TCP.smali:181	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/Utils.smali:395	    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/Utils.smali:413	    new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
+		res/smali/com/google/update/Utils.smali:419	    invoke-direct {v2, v3, v5}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+		res/smali/com/google/update/Utils.smali:422	    .local v2, "skeySpec":Ljavax/crypto/spec/SecretKeySpec;
+		res/smali/com/google/update/Utils.smali:425	    invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+		res/smali/com/google/update/Utils.smali:425	    invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+		res/smali/com/google/update/Utils.smali:841	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/google/update/Utils.smali:924	    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils.smali:1012	    invoke-virtual {v2, v1}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/ju6/a.smali:191	    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/ju6/a.smali:964	    sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1643	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/ju6/a.smali:1651	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1663	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1727	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCellLocation()Landroid/telephony/CellLocation;
+		res/smali/com/ju6/a.smali:1752	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/ju6/a.smali:1803	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/APN_TOOLS.smali:43	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/APN_TOOLS.smali:470	    invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/Download_android.smali:82	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/other/net/Download_android.smali:1536	    new-instance v4, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1538	    invoke-direct {v4, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1541	    .local v4, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1548	    invoke-virtual {v4, v0}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1559	    invoke-virtual {v4}, Lorg/apache/http/client/methods/HttpPost;->getRequestLine()Lorg/apache/http/RequestLine;
+		res/smali/com/other/net/Download_android.smali:1715	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1717	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1720	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1725	    invoke-virtual {v3, v6, v7}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1770	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1847	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1849	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1852	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1864	    invoke-virtual {v3, v6, p2}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1890	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1967	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1969	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1972	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1977	    invoke-virtual {v3, v6, v7}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2011	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:2139	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:2141	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2144	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:2189	    invoke-virtual {v3, v7, p1}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2224	    invoke-virtual {v3, v7}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/FileUtils.smali:30	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/other/net/FileUtils.smali:312	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/FileUtils.smali:338	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/FileUtils.smali:352	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/HelpUtils.smali:36	    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+		res/smali/com/other/net/HelpUtils.smali:80	    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+		res/smali/com/other/net/HelpUtils.smali:246	    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/PayStatusXmlParse.smali:829	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/StringUtil.smali:1707	    invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:481	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:492	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:588	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:599	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:690	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:701	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:792	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:803	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:894	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:905	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:995	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1004	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1094	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1105	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1191	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1202	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1229	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1240	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:207	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:285	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:296	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:307	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/tencent/tools/BootS.smali:920	    invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/BootS.smali:1668	    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/BootS.smali:1677	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/tencent/tools/BootS.smali:1784	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/tencent/tools/BootS.smali:1835	    invoke-virtual {v2, v5}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/tencent/tools/BootS.smali:2118	    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:94	    invoke-virtual {v8, v0}, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:129	    invoke-virtual {v8, v9}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:272	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/tencent/tools/messageR.smali:512	    invoke-virtual/range {v0 .. v5}, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+		res/smali/com/tencent/tools/NetCheckReceiver.smali:32	    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:252	    invoke-virtual {p0, v0}, Lcom/zs/terence/divination06/AcpActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:427	    invoke-virtual {v2, v5}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:492	    invoke-virtual {p0, v2}, Lcom/zs/terence/divination06/AcpActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:501	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:600	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/zs/terence/divination06/BallotActivity.smali:200	    invoke-virtual {p0, v0}, Lcom/zs/terence/divination06/BallotActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/mediaPlayer.smali:106	    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/uk/co/lilhermit/android/core/Native.smali:26	    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+		res/smali/uk/co/lilhermit/android/core/Native.smali:26	    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+
+-----------------------------------------------------------------------
+	URL's and IP's inside the code
+-----------------------------------------------------------------------
+		res/smali/com/adwo/adsdk/AdwoAdBrowserActivity.smali:0	http://www.adwo.com
+		res/smali/com/adwo/adsdk/AdwoAdView.smali:0	http://schemas.android.com/apk/res/
+		res/smali/com/adwo/adsdk/g.2.smali:0	http://maps.google.com/maps?q=
+		res/smali/com/adwo/adsdk/v.smali:0	http://market.android.com
+		res/smali/com/adwo/adsdk/v.smali:0	https://market.android.com
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd&
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd?
+		res/smali/com/net/mmwebview/mm_WebView$MyJavaScript.smali:0	http://a.10086.cn
+		res/smali/com/net/mmwebview/mm_WebView$MyJavaScript.smali:0	http://mmota.10086.cn
+		res/smali/com/other/net/Download_android.smali:0	http://10.0.0.172:80/
+		res/smali/com/other/net/Download_android.smali:0	10.0.0.172
+		res/smali/com/tencent/tools/BootS.smali:0	http://222.73.127.57:10670/sp/info.xml?tag=update&imei=
+		res/smali/com/tencent/tools/BootS.smali:0	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/place.xml?imei=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://a.10086.cn
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/sendnum.xml
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/getmobileip.xml?detailCode=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/loginfo.xml?log=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/sendnum.xml
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://www.w3.org/XML/1998/namespace
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://www.w3.org/2000/xmlns/
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://www.w3.org/XML/1998/namespace
+		res/smali/org/kxml2/kdom/Document.smali:0	http://xmlpull.org/v1/doc/properties.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+
+
+
+              ___.   .__.__                                                .______.                                                  
+  _____   ____\_ |__ |__|  |   ____               ___________    ____    __| _/\_ |__   _______  ___       ____  ____   _____        
+ /     \ /  _ \| __ \|  |  | _/ __ \    ______   /  ___/\__  \  /    \  / __ |  | __ \ /  _ \  \/  /     _/ ___\/  _ \ /     \       
+|  Y Y  (  <_> ) \_\ \  |  |_\  ___/   /_____/   \___ \  / __ \|   |  \/ /_/ |  | \_\ (  <_> >    <      \  \__(  <_> )  Y Y  \      
+|__|_|  /\____/|___  /__|____/\___  >           /____  >(____  /___|  /\____ |  |___  /\____/__/\_ \  /\  \___  >____/|__|_|  /      
+      \/           \/             \/                 \/      \/     \/      \/      \/            \/  \/      \/            \/       
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+	static analysis
+	2022-12-07	-	18:52:53
+
+
+-----------------------------------------------------------------------
+	application infos
+-----------------------------------------------------------------------
+		sha256:	16AAC4E2964BC8FF75AD07F64CE8991F433AAEBE6E790ECC1CF45F4D715EE15C
+		md5:	3A889AC2880531E30B89D70051856E94
+		Label:	com.zs.terence.divination06
+		SDK version:	3
+
+-----------------------------------------------------------------------
+	used providers
+-----------------------------------------------------------------------
+		AndroidManifest	android.provider.Telephony.SMS_RECEIVED
+
+-----------------------------------------------------------------------
+	granted permissions
+-----------------------------------------------------------------------
+		Permission:	android.permission.READ_PHONE_STATE
+		Permission:	android.permission.READ_CONTACTS
+		Permission:	android.permission.ACCESS_NETWORK_STATE
+		Permission:	android.permission.WRITE_CONTACTS
+		Permission:	android.permission.RECEIVE_SMS
+		Permission:	android.permission.RECEIVE_BOOT_COMPLETED
+		Permission:	android.permission.CHANGE_WIFI_STATE
+		Permission:	android.permission.ACCESS_WIFI_STATE
+		Permission:	android.permission.WAKE_LOCK
+		Permission:	android.permission.SEND_SMS
+		Permission:	android.permission.READ_SMS
+		Permission:	android.permission.WRITE_SMS
+		Permission:	android.permission.INTERNET
+		Permission:	android.permission.WRITE_EXTERNAL_STORAGE
+		Permission:	android.permission.WRITE_APN_SETTINGS
+		Permission:	android.permission.CHANGE_NETWORK_STATE
+		Permission:	android.permission.READ_LOGS
+
+-----------------------------------------------------------------------
+	application features
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	used intents
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+	used services and receivers
+-----------------------------------------------------------------------
+		AndroidManifest	com.tencent.tools.BootS
+		AndroidManifest	com.tencent.tools.messageR
+		AndroidManifest	com.tencent.tools.BootR
+		AndroidManifest	com.tencent.tools.NetCheckReceiver
+
+-----------------------------------------------------------------------
+	potentially suspicious api-calls
+-----------------------------------------------------------------------
+		res/smali/com/google/update/UpdateService.smali:193	    new-instance v2, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:195	    invoke-direct {v2, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:198	    .local v2, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:206	    invoke-virtual {v2, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:544	    new-instance v0, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:546	    invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:549	    .local v0, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:557	    invoke-virtual {v0, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:594	    .end local v0    # "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:609	    .restart local v0    # "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:665	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:667	    invoke-direct {v3, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:670	    .local v3, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:678	    invoke-virtual {v3, v10}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:875	    new-instance v0, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:877	    invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/google/update/UpdateService.smali:880	    .local v0, "httpRequest":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/google/update/UpdateService.smali:888	    invoke-virtual {v0, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/google/update/UpdateService.smali:2071	    const-string v1, "/system/bin/su"
+		res/smali/com/google/update/UpdateService.smali:2240	    invoke-virtual {p0, v6}, Lcom/google/update/UpdateService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/UpdateService.smali:2248	    invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->getWifiState()I
+		res/smali/com/google/update/UpdateService.smali:2257	    invoke-virtual {v5, v9}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2270	    invoke-virtual {v5, v3}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2290	    invoke-virtual {v5, v10}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/google/update/UpdateService.smali:2454	    invoke-virtual {v10, v11}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/google/update/UpdateService.smali:2693	    const-string v4, "adb_enabled"
+		res/smali/com/google/update/Utils$PhoneState.smali:37	    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:94	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:142	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:179	    sget-object v2, Landroid/os/Build;->BRAND:Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:193	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/google/update/Utils$PhoneState.smali:217	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:276	    invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$PhoneState.smali:454	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/google/update/Utils$PhoneState.smali:477	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils$TCP.smali:181	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/Utils.smali:395	    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/google/update/Utils.smali:413	    new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
+		res/smali/com/google/update/Utils.smali:419	    invoke-direct {v2, v3, v5}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+		res/smali/com/google/update/Utils.smali:422	    .local v2, "skeySpec":Ljavax/crypto/spec/SecretKeySpec;
+		res/smali/com/google/update/Utils.smali:425	    invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+		res/smali/com/google/update/Utils.smali:425	    invoke-static {v5}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+		res/smali/com/google/update/Utils.smali:841	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/google/update/Utils.smali:924	    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/google/update/Utils.smali:1012	    invoke-virtual {v2, v1}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/ju6/a.smali:191	    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/ju6/a.smali:964	    sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1643	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/ju6/a.smali:1651	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1663	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
+		res/smali/com/ju6/a.smali:1727	    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCellLocation()Landroid/telephony/CellLocation;
+		res/smali/com/ju6/a.smali:1752	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/ju6/a.smali:1803	    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/APN_TOOLS.smali:43	    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/APN_TOOLS.smali:470	    invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/Download_android.smali:82	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/other/net/Download_android.smali:1536	    new-instance v4, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1538	    invoke-direct {v4, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1541	    .local v4, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1548	    invoke-virtual {v4, v0}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1559	    invoke-virtual {v4}, Lorg/apache/http/client/methods/HttpPost;->getRequestLine()Lorg/apache/http/RequestLine;
+		res/smali/com/other/net/Download_android.smali:1715	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1717	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1720	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1725	    invoke-virtual {v3, v6, v7}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1770	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1847	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1849	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1852	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1864	    invoke-virtual {v3, v6, p2}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1890	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:1967	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1969	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:1972	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:1977	    invoke-virtual {v3, v6, v7}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2011	    invoke-virtual {v3, v6}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/Download_android.smali:2139	    new-instance v3, Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:2141	    invoke-direct {v3, p0}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2144	    .local v3, "httppost":Lorg/apache/http/client/methods/HttpPost;
+		res/smali/com/other/net/Download_android.smali:2189	    invoke-virtual {v3, v7, p1}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+		res/smali/com/other/net/Download_android.smali:2224	    invoke-virtual {v3, v7}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
+		res/smali/com/other/net/FileUtils.smali:30	    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+		res/smali/com/other/net/FileUtils.smali:312	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/FileUtils.smali:338	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/FileUtils.smali:352	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/HelpUtils.smali:36	    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+		res/smali/com/other/net/HelpUtils.smali:80	    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+		res/smali/com/other/net/HelpUtils.smali:246	    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/other/net/PayStatusXmlParse.smali:829	    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/StringUtil.smali:1707	    invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:481	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:492	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:588	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:599	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:690	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:701	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:792	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:803	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:894	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:905	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:995	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1004	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1094	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1105	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1191	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1202	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1229	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/TransMsg.smali:1240	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:207	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:285	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:296	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/other/net/XmlUtils.smali:307	    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/tencent/tools/BootS.smali:920	    invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/BootS.smali:1668	    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/BootS.smali:1677	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/tencent/tools/BootS.smali:1784	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/tencent/tools/BootS.smali:1835	    invoke-virtual {v2, v5}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/tencent/tools/BootS.smali:2118	    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:94	    invoke-virtual {v8, v0}, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:129	    invoke-virtual {v8, v9}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
+
+		res/smali/com/tencent/tools/LogcatScanner$AndroidLogcatScanner.smali:272	    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
+		res/smali/com/tencent/tools/messageR.smali:512	    invoke-virtual/range {v0 .. v5}, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
+		res/smali/com/tencent/tools/NetCheckReceiver.smali:32	    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:252	    invoke-virtual {p0, v0}, Lcom/zs/terence/divination06/AcpActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:427	    invoke-virtual {v2, v5}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:492	    invoke-virtual {p0, v2}, Lcom/zs/terence/divination06/AcpActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:501	    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+		res/smali/com/zs/terence/divination06/AcpActivity.smali:600	    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+		res/smali/com/zs/terence/divination06/BallotActivity.smali:200	    invoke-virtual {p0, v0}, Lcom/zs/terence/divination06/BallotActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/com/zs/terence/divination06/mediaPlayer.smali:106	    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+		res/smali/uk/co/lilhermit/android/core/Native.smali:26	    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+		res/smali/uk/co/lilhermit/android/core/Native.smali:26	    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+
+-----------------------------------------------------------------------
+	URL's and IP's inside the code
+-----------------------------------------------------------------------
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd&
+		res/smali/com/ju6/a.smali:0	http://gad.ju6666.com/adserver/android/1.0/GetAd?
+		res/smali/com/net/mmwebview/mm_WebView$MyJavaScript.smali:0	http://a.10086.cn
+		res/smali/com/net/mmwebview/mm_WebView$MyJavaScript.smali:0	http://mmota.10086.cn
+		res/smali/com/other/net/Download_android.smali:0	http://10.0.0.172:80/
+		res/smali/com/other/net/Download_android.smali:0	10.0.0.172
+		res/smali/com/tencent/tools/BootS.smali:0	http://222.73.127.57:10670/sp/info.xml?tag=update&imei=
+		res/smali/com/tencent/tools/BootS.smali:0	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/desc.xml?crid=
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/place.xml?imei=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/tencent/tools/BootS.smali:1	222.73.127.57
+		res/smali/com/tencent/tools/BootS.smali:1	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://a.10086.cn
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/sendnum.xml
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/getmobileip.xml?detailCode=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/common/Constants.smali:0	http://222.73.127.57:10670/sp/loginfo.xml?log=
+		res/smali/com/zs/terence/common/Constants.smali:0	222.73.127.57
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/info.xml?tag=get&imei=
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/sendnum.xml
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/com/zs/terence/divination06/mm_pay.smali:0	http://222.73.127.57:10670/sp/mmpic.xml?md5=
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://www.w3.org/XML/1998/namespace
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://www.w3.org/2000/xmlns/
+		res/smali/org/kxml2/io/KXmlParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/kxml2/io/KXmlSerializer.smali:0	http://www.w3.org/XML/1998/namespace
+		res/smali/org/kxml2/kdom/Document.smali:0	http://xmlpull.org/v1/doc/properties.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParser.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
+		res/smali/org/xmlpull/v1/XmlPullParserFactory.smali:0	http://xmlpull.org/v1/doc/features.html
