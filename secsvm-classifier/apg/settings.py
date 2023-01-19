@@ -37,7 +37,7 @@ config = {
     'y_dataset': _project(datasets_for_secsvm+'labels.json'),
     'X_dataset_test': _project(MB4_dataset+'test_dataset.json'),
     'y_dataset_test': _project(MB4_dataset+'labels.json'),
-    #'meta': _project('data/features/apg-meta.json'),
+    'meta': _project('data/features/labels.json'),
     'indices': _project(''),  # only needed if using fixed indices
     # Java components
     'extractor': _components('extractor.jar'),
@@ -59,7 +59,7 @@ config = {
     'tmp_dir': '/home/or/Desktop/secsvm/tmp',
     'ice_box': '/home/or/Desktop/secsvm/ice_box',
     'results_dir': '/home/or/Desktop/secsvm/res',
-    'goodware_location': '/home/tal/Desktop/Android/samples/MalwareApk',
+    'goodware_location': '/home/or/Desktop/secsvm/res',
     'storage_radix': 0,  # Use if apps are stored with a radix (e.g., radix 3: root/0/0/A/00A384545.apk)
     # Miscellaneous options
     'tries': 1,

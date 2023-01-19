@@ -124,9 +124,7 @@ def main():
     benign_feature_names = [x[0] for x in model.benign_weights]
     utils.dump_json(benign_feature_names, output_dir, 'benign-features.json')
 
-    start_time = utils.stamp_start_time(output_dir)
-    report['start_time'] = start_time
-
+    start_time = utils.stamp_start_path
     # Retry failures from a previous run (some errors are non-deterministic)
     if args.rerun_past_failures:
         failed = glob.glob(os.path.join(output_dir, 'failure', '*.txt'))

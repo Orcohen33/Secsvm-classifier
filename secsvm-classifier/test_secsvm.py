@@ -103,8 +103,8 @@ def main():
     # Find true positive malware
     y_pred = model.clf.predict(model.X_test)
     y_scores = model.clf.decision_function(model.X_test)
-    #for i in range(0,len(y_pred)):
-    #    print(y_pred[i],y_scores[i])
+    for i in range(0,len(y_pred)):
+       print(y_pred[i],y_scores[i])
 
     count=sum(y_pred)
     total=len(y_pred)
