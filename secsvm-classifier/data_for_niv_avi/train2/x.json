@@ -1,0 +1,19 @@
+[
+    {
+        "sha256": "7BFBF0987CAE6904F3EB32D2FF8A90C16C2D1C8B1B4E637B68A81D5C889CD5C2",
+        "app_permissions::android_permission_INTERNET": 1,
+        "app_permissions::android_permission_ACCESS_NETWORK_STATE": 1,
+        "app_permissions::android_permission_RECEIVE_BOOT_COMPLETED": 1,
+        "api_permissions::android_permission_INTERNET": 1,
+        "api_permissions::android_permission_ACCESS_NETWORK_STATE": 1,
+        "api_calls::java\/net\/Socket": 1,
+        "api_calls::android\/content\/Context;->startService": 1,
+        "api_calls::android\/net\/ConnectivityManager;->getActiveNetworkInfo": 1,
+        "intents::b'android_intent_action_BOOT_COMPLETED'": 1,
+        "intents::b'android_intent_action_USER_PRESENT'": 1,
+        "s_and_r::b'_FixedUpdate'": 1,
+        "s_and_r::b'_OnBootReceiver'": 1,
+        "interesting_calls::printStackTrace": 1,
+        "interesting_calls::getSystemService": 1
+    }
+]
